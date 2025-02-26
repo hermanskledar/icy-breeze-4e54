@@ -1,21 +1,4 @@
----
-// Import the global.css file here so that it is included on all pages
-import '../public/styles.css';
-
-export interface Props {
-	title: string;
-	description: string;
-}
-
-const { title, description } = Astro.props;
----
-
-<!-- Global Metadata -->
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="generator" content={Astro.generator} />
-
-<!-- Primary Meta Tags -->
-<title>{title}</title>
-<meta name="title" content={title} />
-<meta name="description" content={description} />
+echo 'import { defineConfig } from "astro/config";
+export default defineConfig({
+  output: "static"
+});' > astro.config.mjs
